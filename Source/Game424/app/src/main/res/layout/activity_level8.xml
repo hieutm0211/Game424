@@ -5,7 +5,7 @@
     android:id="@+id/container">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/color_algal_fuel"
         android:id="@+id/navigationInGame"
@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Level 3"
+            android:text="Level 8"
             android:id="@+id/tv_title"
             android:layout_alignParentTop="true"
             android:layout_marginTop="15dp"
@@ -120,15 +120,15 @@
         >
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_0"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_1"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -136,8 +136,8 @@
             android:layout_marginStart="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_2"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -145,8 +145,8 @@
             android:layout_marginStart="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_3"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -154,8 +154,8 @@
             android:layout_marginStart="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_4"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -164,8 +164,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_5"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -175,8 +175,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_6"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -186,8 +186,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_7"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -197,8 +197,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_8"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -206,8 +206,8 @@
             android:layout_marginTop="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_9"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -217,8 +217,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_10"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -228,8 +228,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_11"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -239,8 +239,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_12"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -248,8 +248,8 @@
             android:layout_marginTop="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_13"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -259,8 +259,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_14"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -270,8 +270,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_15"
             android:textColor="#fff"
             android:background="@drawable/gameplay_button_choose"
@@ -280,8 +280,8 @@
             android:layout_marginStart="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_alignTop="@id/btn_0"
             android:layout_toEndOf="@id/btn_3"
             android:background="@drawable/gameplay_button_choose"
@@ -290,8 +290,8 @@
             android:textColor="#fff"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_alignStart="@id/btn_16"
             android:layout_below="@id/btn_16"
             android:layout_marginTop="5dp"
@@ -300,8 +300,8 @@
             android:textColor="#fff"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_alignStart="@id/btn17"
             android:layout_below="@id/btn17"
             android:layout_marginTop="5dp"
@@ -311,8 +311,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_below="@id/btn_18"
             android:layout_alignStart="@id/btn_18"
             android:layout_marginTop="5dp"
@@ -321,8 +321,8 @@
             android:textColor="#fff"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_below="@id/btn_15"
             android:layout_marginTop="5dp"
             android:background="@drawable/gameplay_button_choose"
@@ -331,8 +331,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_toEndOf="@id/btn_20"
             android:layout_alignTop="@id/btn_20"
             android:background="@drawable/gameplay_button_choose"
@@ -341,8 +341,8 @@
             android:id="@+id/btn_21"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_toEndOf="@id/btn_21"
             android:layout_alignTop="@id/btn_20"
             android:id="@+id/btn_22"
@@ -352,8 +352,8 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_toEndOf="@id/btn_22"
             android:layout_alignTop="@id/btn_20"
             android:layout_marginStart="5dp"
@@ -361,8 +361,8 @@
             android:id="@+id/btn_23"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_toEndOf="@id/btn_23"
             android:id="@+id/btn_24"
             android:layout_alignTop="@id/btn_20"
@@ -370,8 +370,8 @@
             android:layout_marginStart="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_below="@id/btn_24"
             android:background="@drawable/gameplay_button_choose"
             android:layout_marginTop="5dp"
@@ -379,8 +379,8 @@
             android:textColor="#fff"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_26"
             android:layout_toEndOf="@id/btn_25"
             android:layout_alignTop="@id/btn_25"
@@ -389,8 +389,8 @@
             android:layout_marginStart="5dp"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_27"
             android:layout_toEndOf="@id/btn_26"
             android:layout_alignTop="@id/btn_26"
@@ -399,8 +399,8 @@
             android:textColor="#fff"
             />
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:id="@+id/btn_28"
             android:layout_alignTop="@id/btn_27"
             android:layout_toEndOf="@id/btn_27"
@@ -410,14 +410,133 @@
             />
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_toEndOf="@id/btn_28"
             android:id="@+id/btn_29"
             android:layout_alignTop="@id/btn_28"
             android:background="@drawable/gameplay_button_choose"
             android:layout_marginStart="5dp"
             android:textColor="#fff"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:layout_below="@id/btn_29"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_30"
+            android:textColor="#fff"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toEndOf="@id/btn_30"
+            android:id="@+id/btn_31"
+            android:layout_alignTop="@id/btn_30"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toEndOf="@id/btn_31"
+            android:layout_alignTop="@id/btn_31"
+            android:background="@drawable/gameplay_button_choose"
+            android:id="@+id/btn_32"
+            android:layout_marginStart="5dp"
+            android:textColor="#fff"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toEndOf="@id/btn_32"
+            android:background="@drawable/gameplay_button_choose"
+            android:layout_alignTop="@id/btn_32"
+            android:layout_marginStart="5dp"
+            android:textColor="#fff"
+            android:id="@+id/btn_33"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toEndOf="@id/btn_33"
+            android:layout_alignTop="@id/btn_33"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            android:layout_marginStart="5dp"
+            android:id="@+id/btn_34"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_toEndOf="@id/btn_34"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            android:id="@+id/btn_35"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/btn_35"
+            android:layout_marginTop="5dp"
+            android:layout_alignStart="@id/btn_35"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            android:id="@+id/btn_36"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/btn_37"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            android:layout_below="@id/btn_36"
+            android:layout_alignStart="@id/btn_36"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_alignStart="@id/btn_37"
+            android:layout_below="@id/btn_37"
+            android:id="@+id/btn_38"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/btn_38"
+            android:layout_alignStart="@id/btn_38"
+            android:id="@+id/btn_39"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:id="@+id/btn_40"
+            android:layout_below="@id/btn_39"
+            android:layout_alignStart="@id/btn_39"
+            android:layout_marginTop="5dp"
+            android:textColor="#fff"
+            />
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gameplay_button_choose"
+            android:id="@+id/btn_41"
+            android:textColor="#fff"
+            android:layout_below="@id/btn_40"
+            android:layout_alignStart="@id/btn_40"
+            android:layout_marginTop="5dp"
             />
     </RelativeLayout>
 </RelativeLayout>

@@ -68,12 +68,108 @@ public class wingame extends Activity {
             wingame.this.startActivity(i);
             wingame.this.finish();
         }
+        if (currentlevel==3){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",3);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==4){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",4);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==5){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",5);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==6){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",6);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==7){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",7);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==8){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",8);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==9){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",9);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (currentlevel==10){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",10);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
     }
 
     private void Handle_NextLevel(){
         if (nextlevel==2){
             Intent i = new Intent(wingame.this,switchlevel.class);
             i.putExtra("level",2);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==3){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",3);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==4){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",4);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==5){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",5);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==6){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",6);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==7){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",7);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==8){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",8);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==9){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",9);
+            wingame.this.startActivity(i);
+            wingame.this.finish();
+        }
+        if (nextlevel==10){
+            Intent i = new Intent(wingame.this,switchlevel.class);
+            i.putExtra("level",10);
             wingame.this.startActivity(i);
             wingame.this.finish();
         }

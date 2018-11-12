@@ -194,6 +194,9 @@ public class level1 extends Activity {
                     buttons_touched.clear();
                     sumNumber=Logic.fGet_SumNumberRandomly(buttons_gamePlay,4);
                     tv_number.setText(String.valueOf(sumNumber));
+                    //
+                    progressStatus=progressStatus*80/100;
+                    //
                 }
                 else{
                     for (int i=0;i<buttons_touched.size();i++){
@@ -214,6 +217,9 @@ public class level1 extends Activity {
                     buttons_touched.clear();
                     sumNumber=Logic.fGet_SumNumberRandomly(buttons_gamePlay,4);
                     tv_number.setText(String.valueOf(sumNumber));
+                    //
+                    progressStatus=progressStatus*80/100;
+                    //
                 }else
                     virtualbtn.setBackgroundResource(R.drawable.gameplay_button_choose);
             }

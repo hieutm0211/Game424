@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -12,6 +13,9 @@ public class switchlevel extends Activity {
     RelativeLayout container;
     AnimationDrawable anim;
     TextView tv_countdown;
+    private int progress=5;
+    private Handler handler = new Handler();
+
     int counter=5;
     int level;
     @Override
@@ -42,7 +46,6 @@ public class switchlevel extends Activity {
     }
 
     private void CountDown(){
-
         new CountDownTimer(6000,1000){
             public void onTick(long milisUntilFinised){
                 tv_countdown.setText(String.valueOf(counter));
@@ -68,6 +71,54 @@ public class switchlevel extends Activity {
         }
         if (level==2){
             intent = new Intent(switchlevel.this, level2.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==3){
+            intent = new Intent(switchlevel.this, level3.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==4){
+            intent = new Intent(switchlevel.this, level4.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==5){
+            intent = new Intent(switchlevel.this, level5.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==6){
+            intent = new Intent(switchlevel.this, level6.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==7){
+            intent = new Intent(switchlevel.this, level7.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==8){
+            intent = new Intent(switchlevel.this, level8.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==9){
+            intent = new Intent(switchlevel.this, level9.class);
+            switchlevel.this.startActivity(intent);
+            switchlevel.this.finish();
+        }
+
+        if (level==10){
+            intent = new Intent(switchlevel.this, level10.class);
             switchlevel.this.startActivity(intent);
             switchlevel.this.finish();
         }

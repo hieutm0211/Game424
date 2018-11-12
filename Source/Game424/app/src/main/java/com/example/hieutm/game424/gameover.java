@@ -55,6 +55,53 @@ public class gameover extends Activity {
             gameover.this.startActivity(i);
             gameover.this.finish();
         }
-
+        if (currentlevel==3){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",3);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==4){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",4);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==5){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",5);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==6){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",6);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==7){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",7);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==8){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",8);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==9){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",9);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
+        if (currentlevel==10){
+            Intent i = new Intent(gameover.this,switchlevel.class);
+            i.putExtra("level",10);
+            gameover.this.startActivity(i);
+            gameover.this.finish();
+        }
     }
 }

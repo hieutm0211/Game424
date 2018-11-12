@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class level3 extends Activity {
+public class level6 extends Activity {
     ProgressBar progressbar;
     private int progressStatus=0;
     private Handler handler = new Handler();
@@ -47,6 +47,17 @@ public class level3 extends Activity {
     private Button btn_27;
     private Button btn_28;
     private Button btn_29;
+    private Button btn_30;
+    private Button btn_31;
+    private Button btn_32;
+    private Button btn_33;
+    private Button btn_34;
+    private Button btn_35;
+    private Button btn_36;
+    private Button btn_37;
+    private Button btn_38;
+    private Button btn_39;
+    private Button btn_40;
     private List<Button> buttons_gamePlay  =new ArrayList<Button>();
     private List<Button> mButtons_gamePlay= new ArrayList<Button>();
 
@@ -96,6 +107,17 @@ public class level3 extends Activity {
         btn_27 = (Button) findViewById(R.id.btn_27);
         btn_28 = (Button) findViewById(R.id.btn_28);
         btn_29 = (Button) findViewById(R.id.btn_29);
+        btn_30 = (Button) findViewById(R.id.btn_30);
+        btn_31 = (Button) findViewById(R.id.btn_31);
+        btn_32 = (Button) findViewById(R.id.btn_32);
+        btn_33 = (Button) findViewById(R.id.btn_33);
+        btn_34 = (Button) findViewById(R.id.btn_34);
+        btn_35 = (Button) findViewById(R.id.btn_35);
+        btn_36 = (Button) findViewById(R.id.btn_36);
+        btn_37 = (Button) findViewById(R.id.btn_37);
+        btn_38 = (Button) findViewById(R.id.btn_38);
+        btn_39 = (Button) findViewById(R.id.btn_39);
+        btn_40 = (Button) findViewById(R.id.btn_40);
         btn_start=(Button) findViewById(R.id.btn_play);
         btn_next=(Button) findViewById(R.id.btn_next);
         tv_score=(TextView) findViewById(R.id.tv_score);
@@ -135,6 +157,17 @@ public class level3 extends Activity {
         buttons_gamePlay.add(btn_27);
         buttons_gamePlay.add(btn_28);
         buttons_gamePlay.add(btn_29);
+        buttons_gamePlay.add(btn_30);
+        buttons_gamePlay.add(btn_31);
+        buttons_gamePlay.add(btn_32);
+        buttons_gamePlay.add(btn_33);
+        buttons_gamePlay.add(btn_34);
+        buttons_gamePlay.add(btn_35);
+        buttons_gamePlay.add(btn_36);
+        buttons_gamePlay.add(btn_37);
+        buttons_gamePlay.add(btn_38);
+        buttons_gamePlay.add(btn_39);
+        buttons_gamePlay.add(btn_40);
         mButtons_gamePlay.clear();
         mButtons_gamePlay.addAll(buttons_gamePlay);
     }
@@ -146,7 +179,7 @@ public class level3 extends Activity {
         Logic.fReset_GamePlay(mButtons_gamePlay);
 
         //Set random number
-        Logic.fSet_RandomNumber(buttons_gamePlay,10);
+        Logic.fSet_RandomNumber(buttons_gamePlay,20);
 
         //Calculate the number that we have to compute.
         sumNumber = Logic.fGet_SumNumberRandomly(buttons_gamePlay, 4);
@@ -155,7 +188,7 @@ public class level3 extends Activity {
     @Override
     protected void onCreate(final Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level3);
+        setContentView(R.layout.activity_level6);
         mirror();
         Game();
         Handle_Event();
@@ -169,11 +202,11 @@ public class level3 extends Activity {
                         @Override
                         public void run() {
                             if (!isWin()&&progressStatus==100){
-                                Intent i = new Intent(level3.this, gameover.class);
-                                i.putExtra("currentlevel",3);
+                                Intent i = new Intent(level6.this, gameover.class);
+                                i.putExtra("currentlevel",6);
                                 i.putExtra("score",score);
-                                level3.this.startActivity(i);
-                                level3.this.finish();
+                                level6.this.startActivity(i);
+                                level6.this.finish();
                             }
                         }
                     });
@@ -200,12 +233,12 @@ public class level3 extends Activity {
                     //xu ly win game!
                     Intent i;
                     if (isWin()){
-                        i= new Intent(level3.this, wingame.class);
-                        i.putExtra("nextlevel",4);
-                        i.putExtra("currentlevel",3);
+                        i= new Intent(level6.this, wingame.class);
+                        i.putExtra("nextlevel",7);
+                        i.putExtra("currentlevel",6);
                         i.putExtra("score",score);
-                        level3.this.startActivity(i);
-                        level3.this.finish();
+                        level6.this.startActivity(i);
+                        level6.this.finish();
                     }
                 }
             });
