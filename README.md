@@ -1,4 +1,19 @@
-Tên Game: Game 424
+#Game 424
+A simple Android game written by Java.
 
-Mô tả:
-Người chơi sẽ có một bảng các con số ngẫu nhiên và một con số tượng trưng. Người chơi sẽ phải lựa chọn được các con số sao cho tổng của chúng cộng lại phải bằng với con số mà chương trình đưa ra. Nếu chính xác, người chơi sẽ được điểm tích lũy. Nếu sai thì người chơi sẽ bị trừ đi 25% thời gian. Trong trường hợp khác, nếu người chơi không thể chọn ra được các con số trong thời gian đó thì người chơi sẽ bị tính thua cuộc và phải bắt đầu lại từ lv1. Lưu ý, vì game chú trọng đến tính chất phản ứng, xử lý trước yếu tố ngẫu nhiên của con người nên sau một số lượt chơi nhất định, các con số còn lại trên bảng sẽ tiến hành thay đổi vị trí nhằm thử thách người chơi thích ứng với sự ngẫu nhiên.
+##Getting Started
+It will be updated later.
+
+##Running the tests
+It will be update later.
+
+##Contributing
+Read Contributing.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+##Versioning
+We used Semantic Versioning to decribe our project.
+Version: 1.1.0
+
+##Authors
+- Hieu Tran Minh - https://github.com/hieutm0211/
+- Huy Vo Quoc - https://github.com/voquochuyhuy/
