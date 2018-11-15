@@ -17,3 +17,6 @@ Version: 1.1.0
 ##Authors
 - Hieu Tran Minh - https://github.com/hieutm0211/
 - Huy Vo Quoc - https://github.com/voquochuyhuy/
+
+##License
+This project is licensed under the MIT License - see the LICENSE.txt file for details
