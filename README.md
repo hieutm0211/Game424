@@ -11,7 +11,7 @@ It will be updated later.
 Read Contributing.md for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
-We used Semantic Versioning to decribe our project.
+We used Semantic Versioning to describe our project.
 Version: 1.1.0
 
 ## Authors
