@@ -5,7 +5,7 @@ A simple Android game written by Java.
 It will be updated later.
 
 ## Running the tests
-It will be update later.
+It will be updated later.
 
 ## Contributing
 Read Contributing.md for details on our code of conduct, and the process for submitting pull requests to us.
