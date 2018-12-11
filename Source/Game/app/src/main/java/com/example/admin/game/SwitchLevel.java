@@ -78,5 +78,12 @@ public class SwitchLevel extends Activity {
                 this.startActivity(intent);
                 this.finish();
             }
+            if (level==2)
+            {
+                intent = new Intent(this, GamePlay_2.class);
+                intent.putExtra("score",score);
+                this.startActivity(intent);
+                this.finish();
+            }
         }
 }

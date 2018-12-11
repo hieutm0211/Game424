@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class GamePlay_1 extends Activity {
+public class GamePlay_2 extends Activity {
 
     Button
             btn_0,
@@ -36,7 +36,17 @@ public class GamePlay_1 extends Activity {
             btn_12,
             btn_13,
             btn_14,
-            btn_15;
+            btn_15,
+            btn_16,
+            btn_17,
+            btn_18,
+            btn_19,
+            btn_20,
+            btn_21,
+            btn_22,
+            btn_23,
+            btn_24;
+
 
     TextView
             tv_score,
@@ -91,17 +101,29 @@ public class GamePlay_1 extends Activity {
             btn_13 = (Button) findViewById(R.id.btn_13);
             btn_14 = (Button) findViewById(R.id.btn_14);
             btn_15 = (Button) findViewById(R.id.btn_15);
+            btn_16 = (Button) findViewById(R.id.btn_16);
+            btn_17 = (Button) findViewById(R.id.btn17);
+            btn_18 = (Button) findViewById(R.id.btn_18);
+            btn_19 = (Button) findViewById(R.id.btn_19);
+            btn_20 = (Button) findViewById(R.id.btn_20);
+            btn_21 = (Button) findViewById(R.id.btn_21);
+            btn_22 = (Button) findViewById(R.id.btn_22);
+            btn_23 = (Button) findViewById(R.id.btn_23);
+            btn_24 = (Button) findViewById(R.id.btn_24);
         }
 
-        //Score
+        //Score, motion, special  number
 
         {
             tv_score = (TextView) findViewById(R.id.score);
-            tv_score.setText("0");
+            intent= getIntent();
+            tv_score.setText(String.valueOf(intent.getIntExtra("score",0)));
+
             tv_motion = (TextView) findViewById(R.id.tv_motion);
             tv_motion.setText("");
             tv_motion.setTextColor(this.getResources().getColor(R.color.UFOGreen));
             tv_motion.setTypeface(Typeface.DEFAULT_BOLD);
+
             tv_specialNumber = (TextView) findViewById(R.id.tv_specialNumber);
         }
 
@@ -134,21 +156,30 @@ public class GamePlay_1 extends Activity {
             buttons_default.add(btn_13);
             buttons_default.add(btn_14);
             buttons_default.add(btn_15);
+            buttons_default.add(btn_16);
+            buttons_default.add(btn_17);
+            buttons_default.add(btn_18);
+            buttons_default.add(btn_19);
+            buttons_default.add(btn_20);
+            buttons_default.add(btn_21);
+            buttons_default.add(btn_22);
+            buttons_default.add(btn_23);
+            buttons_default.add(btn_24);
             buttons_gamePlay.addAll(buttons_default);
         }
 
         //Animation
 
         {
-        animation = AnimationUtils.loadAnimation(this,R.anim.animation_bounce);
-        interpolator = new BounceInterpolator(0.2,20);
+            animation = AnimationUtils.loadAnimation(this,R.anim.animation_bounce);
+            interpolator = new BounceInterpolator(0.2,20);
 
 
-        animation_in = new AlphaAnimation(0.0f, 1.0f);
-        animation_in.setDuration(3000);
+            animation_in = new AlphaAnimation(0.0f, 1.0f);
+            animation_in.setDuration(3000);
 
-        animation_out = new AlphaAnimation(1.0f, 0.0f);
-        animation_out.setDuration(3000);
+            animation_out = new AlphaAnimation(1.0f, 0.0f);
+            animation_out.setDuration(3000);
         }
     }
 
@@ -156,7 +187,7 @@ public class GamePlay_1 extends Activity {
     @Override
     protected void onCreate(final Bundle savedstate) {
         super.onCreate(savedstate);
-        setContentView(R.layout.gameplay_level_1);
+        setContentView(R.layout.gameplay_level_2);
         initView();
 
         Computer.setValueForButtons(buttons_default,10);
@@ -183,17 +214,17 @@ public class GamePlay_1 extends Activity {
                         public void run() {
                             background_percent.setProgress(background_int);
                             if (background_int==100 && !Computer.isWin(buttons_gamePlay)){
-                                intent = new Intent(GamePlay_1.this,GameOver.class);
+                                intent = new Intent(GamePlay_2.this,GameOver.class);
 
-                                intent.putExtra("level",1);
+                                intent.putExtra("level",2);
                                 intent.putExtra("score",Integer.parseInt(tv_score.getText().toString()));
-                                GamePlay_1.this.finish();
-                                GamePlay_1.this.startActivity(intent);
+                                GamePlay_2.this.finish();
+                                GamePlay_2.this.startActivity(intent);
                             }
                         }
                     });
                     try {
-                        Thread.sleep(50);
+                        Thread.sleep(70);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -228,12 +259,12 @@ public class GamePlay_1 extends Activity {
                     handleEachButton(vir_btn);
 
                     if (Computer.isWin(buttons_gamePlay)) {
-                        intent = new Intent(GamePlay_1.this,WinGame.class);
-                        intent.putExtra("level",1);
-                        intent.putExtra("nextlevel",2);
+                        intent = new Intent(GamePlay_2.this,WinGame.class);
+                        intent.putExtra("level",2);
+                        intent.putExtra("nextlevel",3);
                         intent.putExtra("score",Integer.parseInt(tv_score.getText().toString()));
-                        GamePlay_1.this.finish();
-                        GamePlay_1.this.startActivity(intent);
+                        GamePlay_2.this.finish();
+                        GamePlay_2.this.startActivity(intent);
                     }
 
                 }
@@ -245,35 +276,35 @@ public class GamePlay_1 extends Activity {
 
 
     }
-        private void handleEachButton(Button vir_btn){
-            if (buttons_touched.contains(vir_btn)){
-                Computer.setColorForButtons(vir_btn);
-                buttons_touched.remove(vir_btn);
-                return;
-            }
-
-            vir_btn.setBackgroundResource(R.drawable.button_gameplay_default);
-            buttons_touched.add(vir_btn);
-
-            if (Computer.calculate(buttons_touched,tv_score,Integer.parseInt(tv_specialNumber.getText().toString()))&&buttons_touched.size()<=range){
-                buttons_gamePlay.removeAll(buttons_touched);
-                buttons_touched.clear();
-                background_int*=0.6;
-
-                tv_motion.startAnimation(animation_in);
-                tv_motion.setText(Computer.getCongraturation());
-                tv_motion.startAnimation(animation_out);
-
-                Computer.setSpecialNumber(buttons_gamePlay,3,tv_specialNumber);
-            }
-
-            if (Computer.isBigger(buttons_touched,Integer.parseInt(tv_specialNumber.getText().toString()))){
-                Computer.setColorForButtons(buttons_gamePlay);
-                buttons_touched.clear();
-            }
-            if (buttons_touched.size()>range){
-                Computer.setColorForButtons(buttons_gamePlay);
-                buttons_touched.clear();
-            }
+    private void handleEachButton(Button vir_btn){
+        if (buttons_touched.contains(vir_btn)){
+            Computer.setColorForButtons(vir_btn);
+            buttons_touched.remove(vir_btn);
+            return;
         }
+
+        vir_btn.setBackgroundResource(R.drawable.button_gameplay_default);
+        buttons_touched.add(vir_btn);
+
+        if (Computer.calculate(buttons_touched,tv_score,Integer.parseInt(tv_specialNumber.getText().toString()))&&buttons_touched.size()<=range){
+            buttons_gamePlay.removeAll(buttons_touched);
+            buttons_touched.clear();
+            background_int*=0.6;
+
+            tv_motion.startAnimation(animation_in);
+            tv_motion.setText(Computer.getCongraturation());
+            tv_motion.startAnimation(animation_out);
+
+            Computer.setSpecialNumber(buttons_gamePlay,3,tv_specialNumber);
+        }
+
+        if (Computer.isBigger(buttons_touched,Integer.parseInt(tv_specialNumber.getText().toString()))){
+            Computer.setColorForButtons(buttons_gamePlay);
+            buttons_touched.clear();
+        }
+        if (buttons_touched.size()>range){
+            Computer.setColorForButtons(buttons_gamePlay);
+            buttons_touched.clear();
+        }
+    }
 }

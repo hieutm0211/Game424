@@ -18,6 +18,7 @@
         <activity android:name=".About"/>
         <activity android:name=".Guide"/>
         <activity android:name=".GamePlay_1"/>
+        <activity android:name=".GamePlay_2"/>
         <activity android:name=".SwitchLevel"/>
         <activity android:name=".GameOver"/>
         <activity android:name=".WinGame"/>
