@@ -1,6 +1,8 @@
 # Game 424
 A simple Android game written by Java.
-
+![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163758.png?raw=true)
+![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163932.png?raw=true)
+![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163830.png?raw=true)
 ## Getting Started
 It will be updated later.
 
