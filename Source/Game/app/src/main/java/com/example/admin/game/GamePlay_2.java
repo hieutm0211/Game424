@@ -295,7 +295,7 @@ public class GamePlay_2 extends Activity {
             tv_motion.setText(Computer.getCongraturation());
             tv_motion.startAnimation(animation_out);
 
-            Computer.setSpecialNumber(buttons_gamePlay,3,tv_specialNumber);
+            Computer.setSpecialNumber(buttons_gamePlay,range,tv_specialNumber);
         }
 
         if (Computer.isBigger(buttons_touched,Integer.parseInt(tv_specialNumber.getText().toString()))){
