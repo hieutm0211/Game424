@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/LimeSoap" android:duration="6000"/>
+    <item android:drawable="@color/WildWatermelon" android:duration="6000" />
+    <item android:drawable="@color/SaturatedSky" android:duration="6000"/>
+    <item android:drawable="@color/CityLight" android:duration="6000"/>
+    <item android:drawable="@color/UFOGreen" android:duration="6000"/>
+    <item android:drawable="@color/BrightGreek" android:duration="6000"/>
+    <item android:drawable="@color/BruschettaTomato" android:duration="6000"/>
+    <item android:drawable="@color/ClearChill" android:duration="6000"/>
+    <item android:drawable="@color/Coral" android:duration="6000"/>
+    <item android:drawable="@color/FrenchSkyBlue" android:duration="6000"/>
+    <item android:drawable="@color/Grisaille" android:duration="6000"/>
+    <item android:drawable="@color/Peace" android:duration="6000"/>
+    <item android:drawable="@color/TwinkleBlue" android:duration="6000"/>
+    <item android:drawable="@color/Orange" android:duration="6000"/>
+</animation-list>
