@@ -4,7 +4,7 @@ A simple Android game written by Java.
 ![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163932.png?raw=true)
 ![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163830.png?raw=true)
 ## Getting Started
-It will be updated later.
+Download .apk file from [here][https://github.com/hieutm0211/Game424/releases]
 
 ## Running the tests
 It will be updated later.
