@@ -12,8 +12,7 @@ Read Contributing.md for details on our code of conduct, and the process for sub
 
 ## Versioning
 We used Semantic Versioning to describe our project.
-Version: 1.1.0
-
+Version: 2.1.3
 ## Authors
 - Hieu Tran Minh - https://github.com/hieutm0211/
 - Huy Vo Quoc - https://github.com/voquochuyhuy/
