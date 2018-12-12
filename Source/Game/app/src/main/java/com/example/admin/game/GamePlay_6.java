@@ -1,5 +1,7 @@
 package com.example.admin.game;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -9,9 +11,12 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.daasuu.ei.Ease;
+import com.daasuu.ei.EasingInterpolator;
 import com.john.waveview.WaveView;
 
 import java.util.ArrayList;
@@ -75,6 +80,7 @@ public class GamePlay_6 extends Activity {
             background_int = 0,
             score=0,
             range=3;
+
     List<Button>
             buttons_gamePlay,
             buttons_touched,
@@ -141,10 +147,10 @@ public class GamePlay_6 extends Activity {
         }
 
         //Score, motion, special  number
-		{
+        {
             tv_score = (TextView) findViewById(R.id.score);
-            intent= getIntent();
-            tv_score.setText(String.valueOf(intent.getIntExtra("score",0)));
+            intent = getIntent();
+            tv_score.setText(String.valueOf(intent.getIntExtra("score", 0)));
 
             tv_motion = (TextView) findViewById(R.id.tv_motion);
             tv_motion.setText("");
@@ -159,7 +165,7 @@ public class GamePlay_6 extends Activity {
         {
             handler = new Handler();
             background_percent = (WaveView) findViewById(R.id.background_percent);
-        }  
+        }
 
         //Game Rules
 
@@ -210,13 +216,13 @@ public class GamePlay_6 extends Activity {
             buttons_default.add(btn_40);
             buttons_default.add(btn_41);
             buttons_gamePlay.addAll(buttons_default);
-        } 
+        }
 
         //Animation
 
         {
-            animation = AnimationUtils.loadAnimation(this,R.anim.animation_bounce);
-            interpolator = new BounceInterpolator(0.2,20);
+            animation = AnimationUtils.loadAnimation(this, R.anim.animation_bounce);
+            interpolator = new BounceInterpolator(0.2, 20);
 
 
             animation_in = new AlphaAnimation(0.0f, 1.0f);
@@ -224,8 +230,8 @@ public class GamePlay_6 extends Activity {
 
             animation_out = new AlphaAnimation(1.0f, 0.0f);
             animation_out.setDuration(3000);
-        }             
-
+        }
+    }
         @Override
     	protected void onCreate(final Bundle savedstate) {
         super.onCreate(savedstate);
@@ -250,10 +256,17 @@ public class GamePlay_6 extends Activity {
             public void run() {
                 while (background_int <= 100) {
                     background_int++;
+                    ObjectAnimator waveShiftAnim = ObjectAnimator.ofFloat(
+                            background_percent, "waveShiftRatio", 0f, 1f);
+                    waveShiftAnim.setRepeatCount(ValueAnimator.INFINITE);
+                    waveShiftAnim.setDuration(1000);
+                    waveShiftAnim.setInterpolator(new LinearInterpolator());
+
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
                             background_percent.setProgress(background_int);
+
                             if (background_int==100 && !Computer.isWin(buttons_gamePlay)){
                                 intent = new Intent(GamePlay_6.this,GameOver.class);
 
@@ -265,7 +278,7 @@ public class GamePlay_6 extends Activity {
                         }
                     });
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -314,8 +327,8 @@ public class GamePlay_6 extends Activity {
         }
 
 
-
     }
+
 
     private void handleEachButton(Button vir_btn){
         if (buttons_touched.contains(vir_btn)){

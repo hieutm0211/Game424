@@ -81,6 +81,7 @@ public class GamePlay_5 extends Activity {
             score=0,
             range=3;
 
+
     List<Button>
             buttons_gamePlay,
             buttons_touched,
@@ -276,7 +277,7 @@ public class GamePlay_5 extends Activity {
                         }
                     });
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

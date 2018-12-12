@@ -9,18 +9,28 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" >
         <activity android:name=".Welcome">
+
+        </activity>
+        <activity android:name=".HighScore"/>
+        <activity android:name=".About">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".HighScore"/>
-        <activity android:name=".About"/>
         <activity android:name=".Guide"/>
         <activity android:name=".GamePlay_1"/>
         <activity android:name=".GamePlay_2"/>
         <activity android:name=".SwitchLevel"/>
         <activity android:name=".GameOver"/>
         <activity android:name=".WinGame"/>
+        <activity android:name=".GamePlay_3"/>
+        <activity android:name=".GamePlay_4"/>
+        <activity android:name=".GamePlay_5"/>
+        <activity android:name=".GamePlay_6"/>
+        <activity android:name=".GamePlay_7"/>
+        <activity android:name=".GamePlay_8"/>
+        <activity android:name=".GamePlay_9"/>
+        <activity android:name=".GamePlay_10"/>
     </application>
 </manifest>

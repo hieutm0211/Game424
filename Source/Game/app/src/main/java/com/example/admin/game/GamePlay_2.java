@@ -63,6 +63,7 @@ public class GamePlay_2 extends Activity {
             score=0,
             range=3;
 
+
     List<Button>
             buttons_gamePlay,
             buttons_touched,
@@ -209,11 +210,12 @@ public class GamePlay_2 extends Activity {
             public void run() {
                 while (background_int <= 100) {
                     background_int++;
+                    //Smooth
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
                             background_percent.setProgress(background_int);
-                            if (background_int==100 && !Computer.isWin(buttons_gamePlay)){
+                            if (background_int>=100 && !Computer.isWin(buttons_gamePlay)){
                                 intent = new Intent(GamePlay_2.this,GameOver.class);
 
                                 intent.putExtra("level",2);
@@ -224,7 +226,7 @@ public class GamePlay_2 extends Activity {
                         }
                     });
                     try {
-                        Thread.sleep(70);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

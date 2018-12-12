@@ -1,6 +1,9 @@
 package com.example.admin.game;
 
+import android.app.Activity;
+
 public class BounceInterpolator implements android.view.animation.Interpolator {
+
     private double mAmplitude =1;
     private double mFrequency=10;
 

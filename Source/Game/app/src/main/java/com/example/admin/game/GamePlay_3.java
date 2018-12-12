@@ -68,6 +68,7 @@ public class GamePlay_3 extends Activity {
             score=0,
             range=3;
 
+
     List<Button>
             buttons_gamePlay,
             buttons_touched,
@@ -224,7 +225,9 @@ public class GamePlay_3 extends Activity {
             @Override
             public void run() {
                 while (background_int <= 100) {
+
                     background_int++;
+
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
@@ -240,7 +243,7 @@ public class GamePlay_3 extends Activity {
                         }
                     });
                     try {
-                        Thread.sleep(70);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

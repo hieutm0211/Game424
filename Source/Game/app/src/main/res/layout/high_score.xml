@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <com.john.waveview.WaveView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        app:above_wave_color="@color/BruschettaTomato"
+        app:blow_wave_color="@color/Orange"
+        app:progress="80"
+        app:wave_height="little"
+        app:wave_hz="normal"
+        app:wave_length="large"
+        android:id="@+id/background_percent"
+        />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Coral"
+        android:text="High Score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerInParent="true"
+        android:stretchColumns="*"
+        android:id="@+id/tl_tablehighscore"
+        >
+
+    </TableLayout>
+</RelativeLayout>

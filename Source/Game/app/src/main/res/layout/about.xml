@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
 
-</LinearLayout>
+    >
+    <com.john.waveview.WaveView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        app:above_wave_color="@color/BruschettaTomato"
+        app:blow_wave_color="@color/Orange"
+        app:progress="80"
+        app:wave_height="little"
+        app:wave_hz="normal"
+        app:wave_length="large"
+        android:id="@+id/background_percent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textSize="40dp"
+        android:textColor="@color/Coral"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_about"
+        android:textColor="@color/Orange"
+        android:gravity="center"
+        />
+
+</RelativeLayout>
