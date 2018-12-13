@@ -60,4 +60,13 @@
         android:layout_centerInParent="true"
         android:textColor="@color/Coral"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact: \n Phone: (+84)976086911\n Email: hieutranminh211@gmail.com"
+        android:layout_above="@id/tv_githubtitle"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        />
 </RelativeLayout>
