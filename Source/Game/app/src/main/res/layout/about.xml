@@ -38,6 +38,26 @@
         android:id="@+id/tv_about"
         android:textColor="@color/Orange"
         android:gravity="center"
+        android:textSize="18dp"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_githublink"
+        android:autoLink="web"
+        android:text="https://github.com/hieutm0211/Game424"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Github:"
+        android:layout_above="@id/tv_githublink"
+        android:id="@+id/tv_githubtitle"
+        android:layout_centerInParent="true"
+        android:textColor="@color/Coral"
+        />
 </RelativeLayout>
