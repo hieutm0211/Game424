@@ -4,10 +4,10 @@ A simple Android game written by Java.
 ![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163932.png?raw=true)
 ![](https://github.com/hieutm0211/Game424/blob/master/Demo/Screenshot_20181211-163830.png?raw=true)
 ## Getting Started
-Download .apk file from [here][https://github.com/hieutm0211/Game424/releases]
+Download .apk file from [here](https://github.com/hieutm0211/Game424/releases/tag/2.5.1)
 
 ## Running the tests
-It will be updated later.
+Running as well as possible.
 
 ## Contributing
 Read Contributing.md for details on our code of conduct, and the process for submitting pull requests to us.
