@@ -1,6 +1,7 @@
 package com.example.hieutm.game424;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -13,11 +14,11 @@ public class About extends Activity {
         setContentView(R.layout.about);
         tv_about = (TextView) findViewById(R.id.tv_about);
         tv_about.setText("Game424 \n\n " +
-                "This game is written by H2 team of University of Information Technology.\n" +
-                "The minimum system requirements for android 0S: 5.0+\n\n\n"+
-                "Members of team:\n\n" +
-                "Hieu Tran Minh - Software Engineer\n" +
+                "This game is written by H2 team of University of Information Technology.\n\n" +
+                "Members of team:\n" +
+                "Hieu Tran Minh - Software Engineer (L)\n" +
                 "-------------\n"+
                 "Huy Vo Quoc - Software Engineer\n");
+        tv_about.setBackgroundColor(Color.parseColor("#80ffffff"));
     }
 }

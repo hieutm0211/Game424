@@ -97,6 +97,7 @@
         android:background="@drawable/button_gameover_wingame"
         android:textColor="@color/Orange"
         android:id="@+id/btn_save"
+        android:layout_marginTop="5dp"
         />
     <Button
         android:layout_width="match_parent"

@@ -276,4 +276,8 @@ public class GamePlay_1 extends Activity {
                 buttons_touched.clear();
             }
         }
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

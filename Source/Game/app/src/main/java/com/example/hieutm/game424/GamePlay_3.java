@@ -200,6 +200,10 @@ public class GamePlay_3 extends Activity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
     @Override
     protected void onCreate(final Bundle savedstate) {

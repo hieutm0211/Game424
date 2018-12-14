@@ -43,7 +43,7 @@
         android:text="1024"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/tv_level"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:textColor="#fab1a0"
         android:textStyle="bold"
         android:textSize="60dp"
@@ -60,7 +60,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/tv_title_highscore"
         android:textColor="#fab1a0"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         />
 
     <TextView
@@ -78,11 +78,11 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Next Level"
-        android:layout_below="@id/tv_highscore"
+        android:layout_below="@id/btn_save"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_gameover_wingame"
         android:textColor="#fab1a0"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/btn_nextlevel"
         />
     <Button
@@ -104,5 +104,31 @@
         android:textColor="#fab1a0"
         android:background="@drawable/button_gameover_wingame"
         android:id="@+id/btn_backtomainmenu"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_highscore"
+        android:layout_marginTop="15dp"
+        android:hint="Enter Your Name"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColorHint="@color/Grisaille"
+        android:backgroundTint="#00ffffff"
+        android:textColor="@color/Coral"
+        android:id="@+id/et_inputName"
+        />
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/et_inputName"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_gameover_wingame"
+        android:textColor="#fab1a0"
+        android:id="@+id/btn_save"
+        android:layout_marginTop="5dp"
         />
 </RelativeLayout>

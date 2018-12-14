@@ -86,6 +86,7 @@ public class Welcome extends Activity {
         btn_Play.startAnimation(animation);
         intent = new Intent(this,SwitchLevel.class);
         intent.putExtra("level",1);
+        this.finish();
         this.startActivity(intent);
     }
 

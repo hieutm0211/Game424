@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Level 1"
+            android:text="Level 5"
             android:textColor="@color/Coral"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="5dp"
@@ -43,31 +43,13 @@
             android:layout_marginBottom="2dp"
             android:textColor="@color/Orange"
             />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="settings"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/button_gameover_wingame"
-            android:layout_marginTop="5dp"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="back"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/button_gameover_wingame"
-            android:layout_marginTop="5dp"
-            android:id="@+id/btn_back"
-            />
+
         <View
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/Peace"
-            android:layout_below="@id/btn_back"
+            android:layout_below="@id/score"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="5dp"

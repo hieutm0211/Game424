@@ -143,4 +143,8 @@ public class SwitchLevel extends Activity {
             }
 
         }
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

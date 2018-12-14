@@ -16,6 +16,7 @@ import com.john.waveview.WaveView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GamePlay_9 extends Activity {
 
@@ -90,6 +91,7 @@ public class GamePlay_9 extends Activity {
 
     BounceInterpolator
             interpolator;
+    private int find_lucky;
 
     private void initView() {
 
@@ -226,6 +228,12 @@ public class GamePlay_9 extends Activity {
             animation_out.setDuration(3000);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
+
         @Override
     	protected void onCreate(final Bundle savedstate) {
         super.onCreate(savedstate);
@@ -249,7 +257,7 @@ public class GamePlay_9 extends Activity {
             @Override
             public void run() {
                 while (background_int <= 100) {
-                    background_int+=0.4;
+                    background_int++;
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
@@ -265,7 +273,7 @@ public class GamePlay_9 extends Activity {
                         }
                     });
                     try {
-                        Thread.sleep(55);
+                        Thread.sleep(125);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -327,26 +335,65 @@ public class GamePlay_9 extends Activity {
         vir_btn.setBackgroundResource(R.drawable.button_gameplay_default);
         buttons_touched.add(vir_btn);
 
-        if (Computer.calculate(buttons_touched,tv_score,Integer.parseInt(tv_specialNumber.getText().toString()))&&buttons_touched.size()<=range){
-            buttons_gamePlay.removeAll(buttons_touched);
-            buttons_touched.clear();
-            background_int*=0.6;
 
-            tv_motion.startAnimation(animation_in);
-            tv_motion.setText(Computer.getCongraturation());
-            tv_motion.startAnimation(animation_out);
+        //0, 1: unlucky, 2 normal
+        find_lucky=Computer.findLucky();
+        // 2/5 unlucky :(
 
-            Computer.setSpecialNumber(buttons_gamePlay,range,tv_specialNumber);
+        //if unlucky
+        if (find_lucky==1||find_lucky==0){
+            if (Computer.calculate(buttons_touched,tv_score,Integer.parseInt(tv_specialNumber.getText().toString()))&&buttons_touched.size()<=range){
+                buttons_gamePlay.removeAll(buttons_touched);
+                buttons_touched.clear();
+                background_int*=0.6;
+
+                tv_motion.startAnimation(animation_in);
+                tv_motion.setText(Computer.getCongraturation());
+                tv_motion.startAnimation(animation_out);
+
+
+                Random rd = new Random();
+                int valueOfUnlucky = rd.nextInt(2);
+                Computer.calculate_unlucky(buttons_default,buttons_gamePlay,valueOfUnlucky,background_int);
+                Computer.setSpecialNumber(buttons_gamePlay,range,tv_specialNumber);
+            }
+
+            if (Computer.isBigger(buttons_touched,Integer.parseInt(tv_specialNumber.getText().toString()))){
+                Computer.setColorForButtons(buttons_gamePlay);
+                buttons_touched.clear();
+            }
+            if (buttons_touched.size()>range){
+                Computer.setColorForButtons(buttons_gamePlay);
+                buttons_touched.clear();
+            }
+
         }
 
-        if (Computer.isBigger(buttons_touched,Integer.parseInt(tv_specialNumber.getText().toString()))){
-            Computer.setColorForButtons(buttons_gamePlay);
-            buttons_touched.clear();
-        }
-        if (buttons_touched.size()>range){
-            Computer.setColorForButtons(buttons_gamePlay);
-            buttons_touched.clear();
+
+
+        //Normal, nothing happen
+        if (find_lucky==2){
+            if (Computer.calculate(buttons_touched,tv_score,Integer.parseInt(tv_specialNumber.getText().toString()))&&buttons_touched.size()<=range){
+                buttons_gamePlay.removeAll(buttons_touched);
+                buttons_touched.clear();
+                background_int*=0.6;
+
+                tv_motion.startAnimation(animation_in);
+                tv_motion.setText(Computer.getCongraturation());
+                tv_motion.startAnimation(animation_out);
+
+                Computer.setSpecialNumber(buttons_gamePlay,range,tv_specialNumber);
+            }
+
+            if (Computer.isBigger(buttons_touched,Integer.parseInt(tv_specialNumber.getText().toString()))){
+                Computer.setColorForButtons(buttons_gamePlay);
+                buttons_touched.clear();
+            }
+            if (buttons_touched.size()>range){
+                Computer.setColorForButtons(buttons_gamePlay);
+                buttons_touched.clear();
+            }
         }
     }
-}
 
+}

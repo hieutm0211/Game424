@@ -1,6 +1,7 @@
 package com.example.hieutm.game424;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -12,11 +13,11 @@ public class Guide extends Activity {
         setContentView(R.layout.guide);
         tv_guide = (TextView)findViewById(R.id.tv_guide);
 
-        tv_guide.setText("Người chơi sẽ có một bảng các con số ngẫu nhiên trên màn hình.\n" +
-                " Nhiệm vụ của người chơi là tính tổng các con số sao cho bằng với con số màu xanh." +
-                " Nếu chọn chính xác, game sẽ mất đi các con số đó và người chơi sẽ được cộng điểm và tăng thời gian chơi. " +
-                "Nếu sai thì người chơi sẽ không được cộng điểm nào cả và cũng không được tăng thời gian chơi.\n" +
-                "\tNhưng từ lv5 trở đi, game sẽ có xác xuất xuất hiện ô xui xẻo. Nếu người chơi chọn đúng ô xui xẻo mà không cần đúng hay sai, các ô còn lại sẽ có xác suất thay đổi ngẫu nhiên giá trị, xuất hiện thêm ô mới, giảm thời gian chơi đi 15%.\n" +
-                "\tBù lại cũng có những ô may mắn giúp người chơi tăng điểm, tăng thời gian chơi thêm 10%,...");
+        tv_guide.setText("Players will have a table of random numbers on the screen.\n\n" +
+                "The task of the player is to sum up the numbers so that they equal the blue numbers." +
+                " If the player select boxes correctly, those numbers will be disappear and the player will gain points and increase the playing time.\n\n" +
+                "But from level 5, the game will have the probability of appearing bad luck box. If the player chooses bad luck box, the remaining boxes will have the probability of randomly changing the value or adding new boxes or reducing playing time by 15%.\n\n" +
+                "In return, there are lucky boxes to help players increase score or increase the playing time by 10%.");
+        tv_guide.setBackgroundColor(Color.parseColor("#80ffffff"));
     }
 }

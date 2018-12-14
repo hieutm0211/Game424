@@ -31,10 +31,14 @@
 
         </activity>
         <activity android:name=".GamePlay_6"/>
-        <activity android:name=".GamePlay_7"/>
+        <activity android:name=".GamePlay_7">
+
+        </activity>
         <activity android:name=".GamePlay_8"/>
         <activity android:name=".GamePlay_9"/>
-        <activity android:name=".GamePlay_10"/>
+        <activity android:name=".GamePlay_10">
+
+        </activity>
     </application>
 
 

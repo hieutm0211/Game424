@@ -219,6 +219,7 @@ public class Computer {
         //Increase background_int :15
         if (UnLucky==0){
             background_int+=15;
+            return;
         }
 
 
@@ -234,7 +235,6 @@ public class Computer {
             }
             setValueForButtons(ls_Default,20);
             setColorForButtons(ls_GamePlay);
-            //setSpecialNumber(ls_GamePlay,maxstep,TextView tv_specialNumber);
         }
     }
 

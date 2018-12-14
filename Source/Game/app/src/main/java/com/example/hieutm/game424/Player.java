@@ -5,16 +5,16 @@ import java.io.Serializable;
 public class Player implements Serializable {
     private int
             id,
-            score,
-            rank;
+            score;
     private String
             name;
 
     public Player(){}
 
-    public Player(String name,int score){
+    public Player(int id,String name,int score){
         this.name=name;
         this.score=score;
+        this.id=id;
     }
 
     public int getID(){
@@ -29,12 +29,8 @@ public class Player implements Serializable {
         return score;
     }
 
-    public void setRank(int rank){
-        this.rank=rank;
-    }
-
-    public int getRank(){
-        return rank;
+    public void setScore(int score){
+        this.score=score;
     }
 
     public String getName(){
@@ -45,9 +41,6 @@ public class Player implements Serializable {
         this.name=name;
     }
 
-    public void setScore(int score){
-        this.score=score;
-    }
 
     @Override
     public String toString() {

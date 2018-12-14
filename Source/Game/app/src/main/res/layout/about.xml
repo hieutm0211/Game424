@@ -33,12 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title"
-        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/tv_about"
         android:textColor="@color/Orange"
         android:gravity="center"
         android:textSize="18dp"
+        android:layout_alignParentBottom="true"
         />
 
     <TextView

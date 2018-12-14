@@ -237,6 +237,10 @@ public class GamePlay_5 extends Activity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
     @Override
     protected void onCreate(final Bundle savedstate) {
@@ -399,6 +403,9 @@ public class GamePlay_5 extends Activity {
                 tv_motion.setText(Computer.getCongraturation());
                 tv_motion.startAnimation(animation_out);
 
+                Random rd = new Random();
+                int valueOfUnlucky = rd.nextInt(2);
+                Computer.calculate_unlucky(buttons_default,buttons_gamePlay,valueOfUnlucky,background_int);
                 Computer.setSpecialNumber(buttons_gamePlay,range,tv_specialNumber);
             }
 
@@ -411,9 +418,6 @@ public class GamePlay_5 extends Activity {
                 buttons_touched.clear();
             }
 
-            Random rd = new Random();
-            int valueOfUnlucky = rd.nextInt(2);
-            Computer.calculate_unlucky(buttons_default,buttons_gamePlay,valueOfUnlucky,background_int);
         }
 
 

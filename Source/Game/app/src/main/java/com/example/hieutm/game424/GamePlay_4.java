@@ -236,6 +236,10 @@ public class GamePlay_4 extends Activity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
     @Override
     protected void onCreate(final Bundle savedstate) {

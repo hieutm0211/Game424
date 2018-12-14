@@ -3,12 +3,17 @@ package com.example.hieutm.game424;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GameOver extends Activity {
+
+    DatabaseHelper databaseHelper;
+
 
     Intent
             intent;
@@ -27,9 +32,9 @@ public class GameOver extends Activity {
 
     int
             score,
-            highscore,
             currentlevel;
 
+    Player player;
 
 
     private void initView(){
@@ -41,6 +46,7 @@ public class GameOver extends Activity {
         tv_score= (TextView) findViewById(R.id.tv_score);
         tv_highscore =(TextView) findViewById(R.id.tv_highscore);
         tv_level = (TextView)findViewById(R.id.tv_level);
+        player = new Player();
     }
 
 
@@ -49,6 +55,13 @@ public class GameOver extends Activity {
         super.onCreate(savedstate);
         setContentView(R.layout.gameover);
         initView();
+
+        databaseHelper = new DatabaseHelper(this);
+
+        if (databaseHelper.getFirst()==null) tv_highscore.setText("0");
+        else{
+            tv_highscore.setText(String.valueOf(databaseHelper.getFirst().getScore()));
+        }
 
 
 
@@ -65,6 +78,12 @@ public class GameOver extends Activity {
 
         handlerEvent();
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        return;
     }
 
     private void handlerEvent(){
@@ -91,7 +110,18 @@ public class GameOver extends Activity {
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (TextUtils.isEmpty(et_inputName.getText().toString())) return;
+                player.setName(et_inputName.getText().toString());
+                player.setScore(Integer.parseInt(tv_score.getText().toString()));
+                databaseHelper.addPlayer(player);
+                databaseHelper.sortPlayer();
+                Toast.makeText(GameOver.this,
+                        "Add player successfully", Toast.LENGTH_LONG).show();
+                btn_save.setVisibility(View.INVISIBLE);
+                if (databaseHelper.getFirst()==null) tv_highscore.setText("0");
+                else{
+                    tv_highscore.setText(String.valueOf(databaseHelper.getFirst().getScore()));
+                }
             }
         });
     }
